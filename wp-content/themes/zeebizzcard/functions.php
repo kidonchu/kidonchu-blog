@@ -10,15 +10,20 @@ if ( ! isset( $content_width ) )
 add_action('wp_enqueue_scripts', 'themezee_enqueue_scripts');
 
 if ( ! function_exists( 'themezee_enqueue_scripts' ) ):
-function themezee_enqueue_scripts() { 
-	
+function themezee_enqueue_scripts() {
+
+	// bootstrap
+	wp_enqueue_style('bootstrap_stylesheet', get_stylesheet_directory_uri().'/assets/css/bootstrap.css');
+	wp_enqueue_script('bootstrap_script', get_stylesheet_directory_uri().'/assets/js/bootstrap.js', array('jquery'));
+
 	// Register and Enqueue Stylesheet
 	wp_register_style('zeeBizzCard_stylesheet', get_stylesheet_uri());
 	wp_enqueue_style('zeeBizzCard_stylesheet');
-	
+	wp_enqueue_style('kidonchu-main', get_stylesheet_directory_uri().'/assets/css/main.css');
+
 	// Enqueue jQuery Framework
 	wp_enqueue_script('jquery');
-	
+
 	// Register and enqueue the Malsup Cycle Plugin
 	wp_register_script('zee_jquery-cycle', get_template_directory_uri() .'/includes/js/jquery.cycle.all.min.js', array('jquery'));
 	wp_enqueue_script('zee_jquery-cycle');
@@ -28,7 +33,7 @@ endif;
 
 // Load comment-reply.js if comment form is loaded and threaded comments activated
 add_action( 'comment_form_before', 'themezee_enqueue_comment_reply' );
-	
+
 function themezee_enqueue_comment_reply() {
 	if( get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -40,16 +45,16 @@ function themezee_enqueue_comment_reply() {
 add_action( 'after_setup_theme', 'themezee_setup' );
 
 if ( ! function_exists( 'themezee_setup' ) ):
-function themezee_setup() { 
-	
+function themezee_setup() {
+
 	// init Localization
 	load_theme_textdomain('themezee_lang', get_template_directory() . '/includes/lang' );
-	
+
 	// Add Theme Support
 	add_theme_support('post-thumbnails');
 	add_theme_support('automatic-feed-links');
 	add_editor_style();
-	
+
 	// Add Custom Background
 	add_theme_support('custom-background', array(
 		'default-color' => 'eeeeee',
@@ -63,7 +68,7 @@ function themezee_setup() {
 		'height' => 300,
 		'flex-height' => true,
 		'wp-head-callback' => 'themezee_header_style'));
-		
+
 	// Register Navigation Menus
 	register_nav_menu( 'main_navi', __('Navigation', 'themezee_lang') );
 }
@@ -83,8 +88,8 @@ function themezee_header_style() {
 add_action( 'widgets_init', 'themezee_register_sidebars' );
 
 if ( ! function_exists( 'themezee_register_sidebars' ) ):
-function themezee_register_sidebars() { 
-	
+function themezee_register_sidebars() {
+
 	// Register Sidebars
 	register_sidebar(array('name' => __('Sidebar Blog', 'themezee_lang'), 'id' => 'sidebar-blog'));
 	register_sidebar(array('name' => __('Sidebar Pages', 'themezee_lang'), 'id' => 'sidebar-pages'));
@@ -99,7 +104,7 @@ endif;
 add_action( 'after_setup_theme', 'themezee_include_files' );
 
 if ( ! function_exists( 'themezee_include_files' ) ):
-function themezee_include_files() { 
+function themezee_include_files() {
 
 	// include Admin Files
 	locate_template('/includes/admin/theme-functions.php', true);
@@ -108,10 +113,10 @@ function themezee_include_files() {
 	// include custom Javascript and custom CSS Handler files
 	locate_template('/includes/js/jscript.php', true);
 	locate_template('/includes/css/csshandler.php', true);
-	
+
 	// include Theme Hooks
 	locate_template('/includes/theme-hooks.php', true);
-		
+
 	// include Shortcodes
 	locate_template('/includes/shortcodes/shortcodes.php', true);
 
@@ -119,7 +124,7 @@ function themezee_include_files() {
 	locate_template('/includes/widgets/theme-widget-ads.php', true);
 	locate_template('/includes/widgets/theme-widget-socialmedia.php', true);
 	locate_template('/includes/widgets/theme-widget-twitter.php', true);
-	
+
 	// include Plugin Files
 	locate_template('/includes/plugins/theme-plugin-networks.php', true);
 	locate_template('/includes/plugins/theme-plugin-about.php', true);
@@ -195,7 +200,7 @@ endif;
 
 // Add Postinfo Data
 if ( ! function_exists( 'themezee_display_postinfo' ) ):
-function themezee_display_postinfo() { 
+function themezee_display_postinfo() {
 	if (get_the_tags()) : ?>
 	<div class="meta-tags"><?php the_tags('<ul><li><strong>'.__('Tags: ', 'themezee_lang').'</strong></li><li>','</li><li>','</li></ul>'); ?></div>
 	<div class="clear"></div>
@@ -219,7 +224,7 @@ function themezee_add_portfolio()
 		'has_archive' => false,
 		'rewrite' => array('slug'=>'portfolio-item'),
 		'supports' => array('thumbnail', 'title', 'editor' )
-		) 
+		)
 	);
 }
 

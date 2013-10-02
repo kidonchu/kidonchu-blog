@@ -1,0 +1,68 @@
+.navi
+	background url(../img/bg.png) repeat-x #333
+	height 36px
+	height 2.25rem
+	margin-bottom 12px
+	margin-bottom .75rem
+	border-radius(3px)
+
+#nav, #nav ul
+	margin 0
+	padding 0
+	list-style-type none
+	list-style-position outside
+	position relative
+
+#nav li
+	float left
+	position relative
+
+#nav a
+	display block
+	padding 6px 15px
+	font-size 0.8em
+	line-height 1.875
+	text-transform uppercase
+	text-decoration none
+	color #fff
+
+#nav a:link, #nav a:visited
+	text-decoration none
+
+#nav a:hover
+	background url(../img/navi.png) repeat-x
+
+#nav ul
+	position absolute
+	display none
+	z-index 99
+	border-top 4px solid #fff
+	background url(../img/bg.png) repeat-x #111111
+
+#nav ul a
+	width 200px
+	padding 10px
+	float left
+	border-top none
+	font-weight normal
+
+#nav ul ul
+	top -1px
+	padding-top 0
+	border-top 1px solid #ccc
+
+#nav li ul ul
+	margin-left 220px
+
+#nav li:hover ul ul, #nav li:hover ul ul ul, #nav li:hover ul ul ul ul
+	display none
+
+#nav li:hover ul, #nav li li:hover ul, #nav li li li:hover ul, #nav li li li li:hover ul
+	display block
+
+#nav .current-menu-item a, #nav .current_page_item a
+	text-decoration underline
+
+#nav .current-menu-item ul li a, #nav .current_page_item ul li a
+	text-decoration none
+

@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
-	<div id="content">
-		
+	<div class="content">
+
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
+
 			<div id="page-<?php the_ID(); ?>" <?php post_class(); ?>>
-				
+
 				<h2 class="page-title"><?php the_title(); ?></h2>
 				<?php edit_post_link(__( 'Edit', 'themezee_lang' )); ?>
 
@@ -20,10 +20,9 @@
 		<?php endwhile; ?>
 
 		<?php endif; ?>
-		
+
 		<?php comments_template(); ?>
-		
+
 	</div>
 
-	<?php get_footer(); ?>	
-<?php get_sidebar(); ?>	
+	<?php get_footer(); ?>

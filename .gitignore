@@ -1,3 +1,4 @@
 subdomains/
 wp-config.php
 .ftpquota
+error_log

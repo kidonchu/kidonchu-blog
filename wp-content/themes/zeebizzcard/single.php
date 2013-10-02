@@ -1,18 +1,17 @@
 <?php get_header(); ?>
 
-	<div id="content">
+<div class="content">
 
-		<?php if (have_posts()) : while (have_posts()) : the_post();
-		
-			get_template_part( 'loop', 'single' );
-		
-		endwhile; ?>
+	<?php if (have_posts()) : while (have_posts()) : the_post();
 
-		<?php endif; ?>
+		get_template_part( 'loop', 'single' );
 
-		<?php comments_template(); ?>
-		
-	</div>
-	
-	<?php get_footer(); ?>
-<?php get_sidebar(); ?>	
+	endwhile; ?>
+
+	<?php endif; ?>
+
+	<?php comments_template(); ?>
+
+</div>
+
+<?php get_footer(); ?>

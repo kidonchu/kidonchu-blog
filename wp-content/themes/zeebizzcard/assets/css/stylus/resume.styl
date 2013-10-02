@@ -1,0 +1,95 @@
+/**
+ * Header
+ */
+.resume-name
+	font-size 30px
+	font-size 1.875rem
+	font-weight 700
+	line-height 1.6
+.resume-email
+	font-size 16px
+	font-size 1em
+	line-height 1.5
+	padding-left 1em
+
+/**
+ * Structure
+ */
+.resume-section
+	margin-bottom 48px
+	margin-bottom 3rem
+.resume-section-header
+	border-bottom 1px dotted #aaa
+	font 500 20px/1.2 "Bitter", serif
+	font-size 1.25rem
+	line-height 1.15
+	margin-bottom 12px
+	margin-bottom .75rem
+.resume-list
+	list-style square inside
+	padding-left 1em
+
+/**
+ * Section: Experience
+ */
+.resume-experience-jobtitle
+	font-weight 500
+.resume-experience-company
+	color #666
+	margin-bottom 12px
+	margin-bottom .75em
+.resume-experience-date
+	color #666
+	float right
+	margin-top -3.75em
+.resume-experience-content
+	clear right
+
+/**
+ * Section: Skill
+ */
+.resume-skill-category
+	font-weight 500
+	margin-bottom 24px
+	margin-bottom 1.5rem
+.resume-skill-table
+	margin-bottom 1.5rem
+	width 80%
+	.skill
+		width 35%
+	.aptitude
+		width 25%
+	.experience
+		width 40%
+	.resume-skill-star-one,
+	.resume-skill-star-two,
+	.resume-skill-star-three
+		relative top 4px left
+.resume-skill-legend-item
+	float left
+	margin-right 1em
+.resume-skill-star-one,
+.resume-skill-star-two,
+.resume-skill-star-three
+		background url("../img/star_grey.png") repeat-x scroll 0 0 transparent
+		display block
+		float left
+		height 20px
+		margin-right .3em
+.resume-skill-star-one
+	width 20px
+.resume-skill-star-two
+	width 40px
+.resume-skill-star-three
+	width 60px
+
+unquote("@media screen and (max-width: " + $screen-xs-max + ") {")
+.resume-experience-date
+	float none
+	margin 0
+	margin-bottom 12px
+	margin-bottom .75em
+.resume-experience-company
+	color #666
+	margin-bottom 0
+unquote("}")

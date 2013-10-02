@@ -1,33 +1,24 @@
-<?php get_header(); ?>
+<?php get_header() ?>
+						<div class="content">
 
-	<div id="content">
-		
-		<?php 
-		$options = get_option('themezee_options');
-		if(is_home() and isset($options['themeZee_show_slider']) and $options['themeZee_show_slider'] == 'true') {
-			locate_template('/slide.php', true);
-		}
-		?>
-		 
-		<?php if (have_posts()) : while (have_posts()) : the_post();
-		
-			get_template_part( 'loop', 'index' );
-		
-		endwhile; ?>
-			
-			<?php if(function_exists('wp_pagenavi')) { // if PageNavi is activated ?>
-				<div class="more_posts">
-					<?php wp_pagenavi(); ?>
-				</div>
-			<?php } else { // Otherwise, use traditional Navigation ?>
-				<div class="more_posts">
-					<span class="post_links"><?php next_posts_link(__('&laquo; Older Entries', 'themezee_lang')) ?> &nbsp; <?php previous_posts_link (__('Recent Entries &raquo;', 'themezee_lang')) ?></span>
-				</div>
-			<?php }?>
+							<?php if (have_posts()) : while (have_posts()) : the_post();
 
-		<?php endif; ?>
-			
-	</div>
-	
-	<?php get_footer(); ?>	
-<?php get_sidebar(); ?>	
+								get_template_part('loop', 'index');
+
+							endwhile ?>
+
+							<div class="row">
+								<div class="col-md-12 cf">
+									<span class="more-post-link pull-left">
+										<?php next_posts_link(__('&laquo; Older Entries', 'themezee_lang')) ?>
+									</span>
+									<span class="more-post-link pull-right">
+										<?php previous_posts_link (__('Newer Entries &raquo;', 'themezee_lang')) ?>
+									</span>
+								</div>
+							</div>
+
+							<?php endif ?>
+
+						</div>
+<?php get_footer() ?>
