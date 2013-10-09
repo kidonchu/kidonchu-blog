@@ -132,6 +132,7 @@ blockquote{margin:20px 10px;padding:0 10px;font-size:1em;font-weight:normal;font
 .author_info h5{font-size:1.3em;font-weight:bold;margin-bottom:5px;color:#444}
 .author_description{color:#666}
 .author_website{margin-top:5px;font-size:.9em}
+.additional-resources p{background:url("../img/bullet-plus.png") 5px 9px no-repeat;padding-left:15px;margin-bottom:12px;margin-bottom:.75rem}
 .navi{background:url("../img/bg.png") repeat-x #333;height:36px;height:2.25rem;margin-bottom:12px;margin-bottom:.75rem;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;border-radius:3px}
 #nav,#nav ul{margin:0;padding:0;list-style-type:none;list-style-position:outside;position:relative}
 #nav li{float:left;position:relative}
