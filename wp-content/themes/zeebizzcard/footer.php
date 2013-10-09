@@ -3,9 +3,8 @@
 			</div><!-- end .wrap -->
 
 		<?php themezee_footer_before(); // hook before #footer ?>
-		<div class="main-footer">
-			&copy; kidonchu.com<br>
-			All rights reserved.
+		<div class="footer">
+			&copy; kidonchu.com. All rights reserved.
 		</div>
 		<?php themezee_footer_after(); // hook after #footer ?>
 
