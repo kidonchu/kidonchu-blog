@@ -28,7 +28,7 @@
 
 				<?php themezee_header_before(); // hook before #header ?>
 				<div class="logo">
-					<a class="logo-title" href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a>
+					<h1 class="logo-title"><a href="<?php echo home_url() ?>"><?php bloginfo('name') ?></a></h1>
 					<h2 class="logo-subtitle"><?php echo bloginfo('description') ?></h2>
 				</div>
 				<?php themezee_header_after(); // hook after #header ?>

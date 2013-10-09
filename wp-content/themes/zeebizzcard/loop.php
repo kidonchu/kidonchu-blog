@@ -1,6 +1,6 @@
 							<div id="post-<?php the_ID() ?>" <?php post_class() ?> class="cf">
 
-								<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h2>
+								<h2 class="post-title"><a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title() ?></a></h1>
 
 								<div class="postmeta blog-postmeta"><?php themezee_display_postmeta() ?></div>
 

@@ -1,6 +1,6 @@
 			<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-				<h2 class="post-title"><?php the_title(); ?></h2>
+				<h1 class="post-title"><?php the_title(); ?></h1>
 
 				<div class="postmeta"><?php themezee_display_postmeta(); ?></div>
 
