@@ -111,6 +111,7 @@ blockquote{margin:20px 10px;padding:0 10px;font-size:1em;font-weight:normal;font
 #s{background:#f5f5f5;border:1px solid #ddd;padding:6px 5px;font-size:1em;font-weight:bold;color:#333;width:160px;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;border-radius:3px}
 #searchsubmit{margin-left:5px;padding:5px 10px;color:#333;font-size:1em;font-weight:bold;cursor:pointer;border:1px solid #ddd;background:url("../img/button.png") repeat-x #eee;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;-moz-border-radius:3px;-webkit-border-radius:3px;-khtml-border-radius:3px;border-radius:3px}
 #searchsubmit:hover{background:url("../img/button_hover.png") repeat-x #eee}
+.breadcrumbs{font-size:12.8px;font-size:.8rem;font-weight:300;line-height:1.875}
 .post-title,.page-title{font-weight:500;font-size:32px;font-size:2rem;line-height:1.5;}
 .post-title a:link,.page-title a:link,.post-title a:visited,.page-title a:visited{text-decoration:none}
 .post-title a:hover,.page-title a:hover,.post-title a:active,.page-title a:active{text-decoration:underline}

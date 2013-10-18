@@ -2,6 +2,10 @@
 
 	<div class="content">
 
+		<?php if (function_exists('yoast_breadcrumb')) {
+			yoast_breadcrumb('<div class="breadcrumbs">','</div>');
+		} ?>
+
 		<div id="page-<?php the_ID() ?>" <?php post_class() ?>>
 
 			<div class="resume-name">KidonChu <span class="mute">extends</span> WebDeveloper {</div>
